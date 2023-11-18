@@ -2,13 +2,12 @@ import os
 import uuid
 
 from flask import render_template, request, jsonify, redirect, url_for, flash
-from flask_login import login_user
+from flask_login import login_user, logout_user, login_required, current_user
 
 from database import *
-from server import app
 from models import User
-from forms import RegisterForm, LoginForm, validate_barcode
-from scancode import get_text_from_code
+from forms import RegisterForm, LoginForm
+
 from __init__ import app
 
 
@@ -33,7 +32,6 @@ def about(username):
 
 @app.route('/guide')
 def guide():
-
     return render_template('guide.html')
 
 
@@ -42,22 +40,13 @@ def maps():
     return render_template('map.html')
 
 
-@app.route('/scanner')
-def scan():
-    id_cod = get_text_from_code()
-    if (validate_barcode(id_cod)):
-        return render_template('scanner.html')
-    else:
-        flash(f'Cod de bare invalid!')
-
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
     if form.validate_on_submit():
         attempted_user = get_user_by_username(form.username.data)
         if attempted_user is not None:
-            # login_user()
+            login_user(attempted_user)
             flash(f'Succes! You are logged in as:{attempted_user.username}', category='success')
             return redirect(url_for(about, username=attempted_user.username))
         else:
@@ -68,7 +57,7 @@ def login():
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     form = RegisterForm()
-    if form.validate_on_submit():
+    if form.validate_username(form.username.data) and form.validate_email(form.email.data):
         user_to_create = User(id=str(uuid.uuid4()),
                               firstName=form.first_name.data,
                               lastName=form.last_name.data,
@@ -80,13 +69,18 @@ def register():
         insert_user(user_to_create)
         login_user(user_to_create)
         flash(f'Account created successfully! You are logged in as {user_to_create.username}', category='success')
-        return redirect(url_for('profile'))
-
-    if form.errors != {}:
-        for err_msg in form.errors.values():
-            flash(f'There was an error{err_msg}', category='danger')
+        return redirect(url_for('about', username=user_to_create.username))
+    elif form.errors != {}:
+        redirect(url_for('guide'))
 
     return render_template('register.html', form=form)
+
+
+@app.route('/logout')
+def logout():
+    logout_user()
+    flash("You have been logged out", category='info')
+    return redirect(url_for('index'))
 
 
 if __name__ == "__main__":

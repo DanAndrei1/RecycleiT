@@ -11,6 +11,6 @@ login_manager.login_view = 'login'
 login_manager.login_message_category = 'info'
 load_dotenv()
 connect = psycopg2.connect(database=os.getenv('database'), user='postgres', password=os.getenv('password'),
-                           host=os.getenv('host'), port=5431)
+                           host=os.getenv('host'), port=5432)
 cursor = connect.cursor()
 app.config['SECRET_KEY'] = os.getenv("secretkey")

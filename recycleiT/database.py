@@ -1,15 +1,16 @@
-from __init__ import cursor, login_manager
+from __init__ import cursor
 from models import User, Recycling
 
-@login_manager.user_loader
-def load_user(user_id):
-    cursor.execute('select * from public.users where id = %s', (user_id,))
-    row = cursor.fetchall()
-    try:
-        user = User(id=row[0][0], username=row[0][1], email=row[0][2], password=row[0][3], budget=row[0][4])
-        return user
-    except Exception:
-        return None
+
+# @login_manager.user_loader
+#def load_user(user_id):
+#     cursor.execute('select * from public.users where id = %s', (user_id,))
+#     row = cursor.fetchall()
+#     try:
+#         user = User(id=row[0][0], username=row[0][1], email=row[0][2], password=row[0][3], budget=row[0][4])
+#         return user
+#     except Exception:
+#         return None
 
 
 def get_user_by_username(username):
