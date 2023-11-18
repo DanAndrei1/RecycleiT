@@ -82,7 +82,6 @@ def logout():
     flash("You have been logged out", category='info')
     return redirect(url_for('index'))
 
-
 if __name__ == "__main__":
     if not os.environ.get('IS_CONTAINER'):
         app.run(debug=True, port=8080)

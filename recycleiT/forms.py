@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import Length, EqualTo, Email, DataRequired, ValidationError
-from database import get_user_by_username, get_user_by_email, get_recycle_by_barcode
+from database import get_user_by_username, get_user_by_email
 
 
 class LoginForm(FlaskForm):
