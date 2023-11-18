@@ -27,7 +27,6 @@ def leaderboard():
 @app.route('/<username>')
 def about(username):
     user = get_user_by_username(username)
-    print(user)
     return render_template('profile.html', user=user)
 
 

@@ -17,7 +17,8 @@ def get_user_by_username(username):
     cursor.execute('select * from public.users where username = %s', (username,))
     row = cursor.fetchall()
     try:
-        user = User(id=row[0][0], lastName=row[0][1], firstName=row[0][2], username=row[0][3], email=row[0][4])
+        user = User(id=row[0][0], lastName=row[0][1], firstName=row[0][2], username=row[0][3], email=row[0][4],
+                    totalPoints=row[0][5], password=row[0][6])
         return user
     except Exception:
         return None
@@ -27,7 +28,8 @@ def get_user_by_email(email):
     cursor.execute('select * from public.users where email = %s', (email,))
     row = cursor.fetchall()
     try:
-        user = User(id=row[0][0], lastName=row[0][1], firstName=row[0][2], username=row[0][3], email=row[0][4])
+        user = User(id=row[0][0], lastName=row[0][1], firstName=row[0][2], username=row[0][3], email=row[0][4],
+                    totalPoints=row[0][5], password=row[0][6])
         return user
     except Exception:
         return None
