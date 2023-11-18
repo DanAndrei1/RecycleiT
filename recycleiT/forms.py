@@ -21,16 +21,17 @@ class RegisterForm(FlaskForm):
     submit = SubmitField(label='Creeaza cont')
 
     @staticmethod
+    def validate_email(email_to_check):
+        user = get_user_by_email(email_to_check)
+        if user:
+            raise ValidationError("Email already exists")
+
+    @staticmethod
     def validate_username(username_to_check):
         user = get_user_by_username(username_to_check)
         if user:
             raise ValidationError("Username already exists")
 
-    @staticmethod
-    def validate_email(email_to_check):
-        user = get_user_by_email(email_to_check)
-        if user:
-            raise ValidationError("Email already exists")
 
         class BarcodeForm(FlaskForm):
             barcode = StringField(validators=[DataRequired()])
