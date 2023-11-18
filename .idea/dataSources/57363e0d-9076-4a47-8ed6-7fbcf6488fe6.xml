@@ -3,15 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.49">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-4||-9223372036854775808|c|G
-4||10|c|G
-4||10|C|G
-4||10|T|G</Grants>
-      <IntrospectionStateNumber>783</IntrospectionStateNumber>
+      <IntrospectionStateNumber>808</IntrospectionStateNumber>
       <ServerVersion>16.1</ServerVersion>
       <StartupTime>1700312725</StartupTime>
       <TimeZones>true ACDT
@@ -812,7 +804,7 @@ false Zulu
 13474||10|C|G
 13474||-9223372036854775808|U|G
 13474||10|U|G</Grants>
-      <IntrospectionStateNumber>783</IntrospectionStateNumber>
+      <IntrospectionStateNumber>808</IntrospectionStateNumber>
       <ObjectId>16390</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4243,9 +4235,9 @@ false Zulu
     <schema id="266" parent="3" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>783</IntrospectionStateNumber>
-      <IntrospectionTimestamp>2023-11-18.15:13:29.343</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-11-18.13:13:29</LocalIntrospectionTimestamp>
+      <IntrospectionStateNumber>808</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2023-11-18.20:21:07.248</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-11-18.18:21:07</LocalIntrospectionTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>523</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4264,7 +4256,7 @@ false Zulu
     </table>
     <table id="269" parent="266" name="users">
       <ObjectId>16399</ObjectId>
-      <StateNumber>762</StateNumber>
+      <StateNumber>807</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -4409,7 +4401,14 @@ pg_catalog</CollationParentNames>
       <StateNumber>755</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="288" parent="269" name="users_pkey">
+    <column id="288" parent="269" name="password">
+      <DasType>varchar(60)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StateNumber>807</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="289" parent="269" name="users_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16409</ObjectId>
@@ -4421,7 +4420,7 @@ pg_catalog</CollationParentNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <index id="289" parent="269" name="users_username_key">
+    <index id="290" parent="269" name="users_username_key">
       <ColNames>username</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16411</ObjectId>
@@ -4432,7 +4431,7 @@ pg_catalog</CollationParentNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <index id="290" parent="269" name="users_email_key">
+    <index id="291" parent="269" name="users_email_key">
       <ColNames>email</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16407</ObjectId>
@@ -4443,20 +4442,20 @@ pg_catalog</CollationParentNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="291" parent="269" name="users_pkey">
+    <key id="292" parent="269" name="users_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16410</ObjectId>
       <Primary>1</Primary>
       <StateNumber>760</StateNumber>
       <UnderlyingIndexId>16409</UnderlyingIndexId>
     </key>
-    <key id="292" parent="269" name="users_username_key">
+    <key id="293" parent="269" name="users_username_key">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16412</ObjectId>
       <StateNumber>761</StateNumber>
       <UnderlyingIndexId>16411</UnderlyingIndexId>
     </key>
-    <key id="293" parent="269" name="users_email_key">
+    <key id="294" parent="269" name="users_email_key">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16408</ObjectId>
       <StateNumber>759</StateNumber>
