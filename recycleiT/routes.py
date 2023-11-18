@@ -40,14 +40,18 @@ def maps():
     return render_template('map.html')
 
 
-@app.route('/login')
+@app.route('/login', methods=['GET','POST'])
 def login():
-    pass
-    # form = LoginForm() if form.validate_on_submit(): attempted_user = get_user_by_username(
-    # usernameToCheck=form.username.data) if attempted_user is not None and bcrypt.check_password_hash(
-    # attempted_user.get_password(), form.password.data): login_user(attempted_user) flash(f'Succes! You are logged
-    # in as:{attempted_user.username}', category='success') return redirect(url_for('about')) else: flash('Username
-    # and password are not match! Try again', category='danger') return render_template('login.html', form=form)
+    form = LoginForm()
+    if form.validate_on_submit():
+        attempted_user = get_user_by_username(form.username.data)
+        if attempted_user is not None:
+            # login_user()
+            flash(f'Succes! You are logged in as:{attempted_user.username}', category='success')
+            return redirect(url_for(about, username=attempted_user.username))
+        else:
+            flash(f'Username-ul si parola nu sunt corecte', category='danger')
+    return render_template('login.html', form=form)
 
 
 @app.route('/register')
