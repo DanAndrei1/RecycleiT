@@ -1,8 +1,8 @@
-from flask_wtf import FlaskForm
+from flask import FlaskForm
 from wtforms import StringField, EmailField, PasswordField
 from wtforms.validators import Length, EqualTo, Email, DataRequired, ValidationError
 
-from RecycleiT.recycleiT.database import get_user_by_username, get_user_by_email
+from recycleiT.database import get_user_by_username, get_user_by_email
 
 
 class LoginForm(FlaskForm):

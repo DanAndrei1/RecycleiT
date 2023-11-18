@@ -1,16 +1,14 @@
+import psycopg2
+from flask import Flask
+from flask.cli import load_dotenv
 import os
 
-import psycopg2
-from dotenv import load_dotenv
-from flask import Flask
-from flask_bcrypt import Bcrypt
-from flask_login import LoginManager
+# from flask_login import LoginManager
 
 app = Flask(__name__)
-bcrypt = Bcrypt(app)
-login_manager = LoginManager(app)
-login_manager.login_view = 'login'
-login_manager.login_message_category = 'info'
+# login_manager = LoginManager(app)
+# login_manager.login_view = 'login'
+# login_manager.login_message_category = 'info'
 load_dotenv()
 connect = psycopg2.connect(database=os.getenv('database'), user='postgres', password=os.getenv('password'),
                            host=os.getenv('host'), port=5432)
