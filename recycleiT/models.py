@@ -8,6 +8,12 @@ class User:
         self.password = password
         self.totalPoints = totalPoints
 
+    @property
+    def prettier_points(self):
+        if len(str(self.totalPoints)) > 3:
+            return f'{str(self.totalPoints)[:-3]},{str(self.totalPoints)[-3:]}'
+        return str(self.totalPoints)
+
 
 class Recycling:
     def __init__(self, id, idUser, recycleDate, allocatedPoints):
