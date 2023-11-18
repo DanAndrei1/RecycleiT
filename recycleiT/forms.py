@@ -1,8 +1,8 @@
-from flask import FlaskForm
+from flask_wtf import FlaskForm
 from wtforms import StringField, EmailField, PasswordField
 from wtforms.validators import Length, EqualTo, Email, DataRequired, ValidationError
 
-from recycleiT.database import get_user_by_username, get_user_by_email
+from database import get_user_by_username, get_user_by_email, get_recycle_by_barcode
 
 
 class LoginForm(FlaskForm):
@@ -29,3 +29,12 @@ class RegisterForm(FlaskForm):
         user = get_user_by_email(email_to_check)
         if user:
             raise ValidationError("Email already exists")
+
+        class BarcodeForm(FlaskForm):
+            barcode = StringField(validators=[DataRequired()])
+
+            @staticmethod
+            def validate_barcode(barcode_to_check):
+                user = get_recycle_by_barcode(barcode_to_check)
+                if user:
+                    raise ValidationError("Barcode already exists")

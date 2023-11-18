@@ -1,5 +1,5 @@
 from __init__ import cursor
-from recycleiT.models import User
+from models import User, Recycling
 
 
 # @login_manager.user_loader
@@ -31,6 +31,25 @@ def get_user_by_email(email):
         return user
     except Exception:
         return None
+
+
+def get_recycle_by_barcode(barcode):
+    cursor.execute('select * from public.recycling where id = %s', (barcode,))
+    row = cursor.fetchall()
+    try:
+        recycle = Recycling(id=row[0][0], id_user=row[0][1], recycleDate=row[0][2], allocatedPoints=row[0][3])
+        return recycle
+    except Exception:
+        return None
+
+
+def insert_user(user):
+    cursor.execute(
+        'insert into public.users values (%s, %s, %s, %s, %s)',
+        (user.id, user.lastName, user.firstName, user.username,
+         user.email)
+    )
+    cursor.commit()
 
 
 def get_leaderboard():

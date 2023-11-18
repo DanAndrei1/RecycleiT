@@ -1,9 +1,9 @@
-import psycopg2
-from flask import Flask
-from flask.cli import load_dotenv
 import os
 
-# from flask_login import LoginManager
+import psycopg2
+from dotenv import load_dotenv
+from flask import Flask
+from flask_login import LoginManager
 
 app = Flask(__name__)
 # login_manager = LoginManager(app)

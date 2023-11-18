@@ -2,12 +2,13 @@ import os
 import uuid
 
 from flask import render_template, request, jsonify, redirect, url_for, flash
+from flask_login import login_user, logout_user, login_required, current_user
 
 from database import *
 from server import app
 from models import User
 from forms import RegisterForm, LoginForm
-from __init__ import bcrypt
+
 from __init__ import app
 
 
@@ -19,12 +20,15 @@ def index():
 
 @app.route("/leaderboard")
 def leaderboard():
-    return render_template('leaderboard.html')
+    users = get_leaderboard()
+    return render_template('leaderboard.html', users=users)
 
 
 @app.route('/profile')
+@login_required
 def about():
-    return render_template('profile.html')
+    pass
+
 
 @app.route('/guide')
 def guide():
@@ -39,16 +43,11 @@ def maps():
 @app.route('/login')
 def login():
     pass
-    # form = LoginForm()
-    # if form.validate_on_submit():
-    #     attempted_user = get_user_by_username(usernameToCheck=form.username.data)
-    #     if attempted_user is not None and bcrypt.check_password_hash(attempted_user.get_password(), form.password.data):
-    #         login_user(attempted_user)
-    #         flash(f'Succes! You are logged in as:{attempted_user.username}', category='success')
-    #         return redirect(url_for('about'))
-    #     else:
-    #         flash('Username and password are not match! Try again', category='danger')
-    # return render_template('login.html', form=form)
+    # form = LoginForm() if form.validate_on_submit(): attempted_user = get_user_by_username(
+    # usernameToCheck=form.username.data) if attempted_user is not None and bcrypt.check_password_hash(
+    # attempted_user.get_password(), form.password.data): login_user(attempted_user) flash(f'Succes! You are logged
+    # in as:{attempted_user.username}', category='success') return redirect(url_for('about')) else: flash('Username
+    # and password are not match! Try again', category='danger') return render_template('login.html', form=form)
 
 
 @app.route('/register')
