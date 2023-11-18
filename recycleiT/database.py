@@ -55,7 +55,7 @@ def insert_user(user):
 
 
 def get_leaderboard():
-    cursor.execute('select username, total_points from public.users order by total_points limit 10')
+    cursor.execute('select username, total_points from public.users order by total_points desc limit 10')
     row = cursor.fetchall()
     try:
         users = []
