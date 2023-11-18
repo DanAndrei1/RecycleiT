@@ -4,13 +4,11 @@ import uuid
 from flask import render_template, request, jsonify, redirect, url_for, flash
 from flask_login import login_user
 
-# from flask_login import login_user, logout_user, login_required, current_user
-
 from database import *
 from server import app
 from models import User
-from forms import RegisterForm, LoginForm
-
+from forms import RegisterForm, LoginForm, validate_barcode
+from scancode import get_text_from_code
 from __init__ import app
 
 
@@ -35,6 +33,7 @@ def about(username):
 
 @app.route('/guide')
 def guide():
+
     return render_template('guide.html')
 
 
@@ -43,7 +42,16 @@ def maps():
     return render_template('map.html')
 
 
-@app.route('/login', methods=['GET','POST'])
+@app.route('/scanner')
+def scan():
+    id_cod = get_text_from_code()
+    if (validate_barcode(id_cod)):
+        return render_template('scanner.html')
+    else:
+        flash(f'Cod de bare invalid!')
+
+
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
     if form.validate_on_submit():

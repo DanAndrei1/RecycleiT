@@ -32,12 +32,7 @@ class RegisterForm(FlaskForm):
         if user:
             raise ValidationError("Username already exists")
 
-
-        class BarcodeForm(FlaskForm):
-            barcode = StringField(validators=[DataRequired()])
-
-            @staticmethod
-            def validate_barcode(barcode_to_check):
-                user = get_recycle_by_barcode(barcode_to_check)
-                if user:
-                    raise ValidationError("Barcode already exists")
+def validate_barcode(barcode_to_check):
+    user = get_recycle_by_barcode(barcode_to_check)
+    if user:
+        raise ValidationError("Barcode already exists")

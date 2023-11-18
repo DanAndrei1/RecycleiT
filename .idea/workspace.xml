@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16128c73-f0a6-4c42-a488-d65db1195568" name="Changes" comment="register">
-      <change afterPath="$PROJECT_DIR$/text_ghid.txt" afterDir="false" />
+    <list default="true" id="16128c73-f0a6-4c42-a488-d65db1195568" name="Changes" comment="ghid + altele">
+      <change afterPath="$PROJECT_DIR$/recycleiT/scancode.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycleiT/templates/scanner.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycleiT/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/recycleiT/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycleiT/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/recycleiT/database.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recycleiT/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/recycleiT/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycleiT/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/recycleiT/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycleiT/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/recycleiT/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/recycleiT/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/templates/guide.html" beforeDir="false" afterPath="$PROJECT_DIR$/recycleiT/templates/guide.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,9 +77,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/recycleiT" />
       <recent name="$PROJECT_DIR$/recycleiT/static" />
       <recent name="$PROJECT_DIR$/recycleiT/templates" />
-      <recent name="$PROJECT_DIR$/recycleiT" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -185,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700334455769</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ghid + altele">
+      <option name="closed" value="true" />
+      <created>1700344946812</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1700344946812</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,9 +219,10 @@
     <MESSAGE value="map cu pins" />
     <MESSAGE value="routes" />
     <MESSAGE value="register" />
-    <option name="LAST_COMMIT_MESSAGE" value="register" />
+    <MESSAGE value="ghid + altele" />
+    <option name="LAST_COMMIT_MESSAGE" value="ghid + altele" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/RecycleiT$RecycleiT.coverage" NAME="RecycleiT Coverage Results" MODIFIED="1700329542883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/RecycleiT$RecycleiT.coverage" NAME="RecycleiT Coverage Results" MODIFIED="1700345867259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
