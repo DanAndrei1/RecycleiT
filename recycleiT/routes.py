@@ -2,7 +2,7 @@ import os
 import uuid
 
 from flask import render_template, request, jsonify, redirect, url_for, flash
-from flask_login import login_user, logout_user, login_required, current_user
+# from flask_login import login_user, logout_user, login_required, current_user
 
 from database import *
 from server import app
@@ -24,10 +24,11 @@ def leaderboard():
     return render_template('leaderboard.html', users=users)
 
 
-@app.route('/profile')
-@login_required
-def about():
-    pass
+@app.route('/<username>')
+def about(username):
+    user = get_user_by_username(username)
+    print(user)
+    return render_template('profile.html', user=user)
 
 
 @app.route('/guide')

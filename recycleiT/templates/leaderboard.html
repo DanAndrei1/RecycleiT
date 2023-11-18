@@ -6,7 +6,8 @@
 </head>
 <body>
 
-{for }
-
+{%for user in users %}
+    <p>{{user[0],user[1]}}</p>
+{%endfor%}
 </body>
 </html>
