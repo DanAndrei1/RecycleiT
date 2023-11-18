@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  #map {
+    height: 400px;
+    width: 100%;
+      background-color: grey;
+  }
+</style>
+<head>
+    <title>Harta puncte reciclare</title>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+      function initMap()
+      {
+        var options = {
+          zoom: 12,
+          center: { lat: 46.7835025, lng:23.4516986 },
+        };
+        var map = new google.maps.Map(document.getElementById('map'), options);
+        var marker = new google.maps.Marker({
+          position: { lat: 46.7876976, lng: 23.6088566 },
+          map: map,
+        });
+        var marker2 = new google.maps.Marker({
+          position: { lat: 46.7476976, lng: 23.6088566 },
+          map: map,
+        });
+
+      }
+    </script>
+     <script async defer
+             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4BQBDr9xZbeRi4pn6S9V9ga-twiuvMVo&callback=initMap">
+     </script>
+
+</body>
+</html>
