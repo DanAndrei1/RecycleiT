@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16128c73-f0a6-4c42-a488-d65db1195568" name="Changes" comment="routes">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recycleiT/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recycleiT/map.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recycleiT/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="16128c73-f0a6-4c42-a488-d65db1195568" name="Changes" comment="models">
+      <change afterPath="$PROJECT_DIR$/recycleiT/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/recycleiT/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/recycleiT/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/recycleiT/map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/recycleiT/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -50,10 +52,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "last_opened_file_path": "/Users/danandrei1/Desktop/RecycleiT",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -103,7 +106,7 @@
       <workItem from="1700307415416" duration="1117000" />
       <workItem from="1700308541270" duration="1609000" />
       <workItem from="1700310157997" duration="776000" />
-      <workItem from="1700310944162" duration="2723000" />
+      <workItem from="1700310944162" duration="6679000" />
     </task>
     <task id="LOCAL-00001" summary="routes">
       <option name="closed" value="true" />
@@ -113,7 +116,23 @@
       <option name="project" value="LOCAL" />
       <updated>1700308913465</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="models">
+      <option name="closed" value="true" />
+      <created>1700313728548</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1700313728548</updated>
+    </task>
+    <task id="LOCAL-00003" summary="models">
+      <option name="closed" value="true" />
+      <created>1700317073992</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700317073992</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +144,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="routes" />
-    <option name="LAST_COMMIT_MESSAGE" value="routes" />
+    <MESSAGE value="models" />
+    <option name="LAST_COMMIT_MESSAGE" value="models" />
   </component>
 </project>
