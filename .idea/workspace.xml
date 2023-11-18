@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16128c73-f0a6-4c42-a488-d65db1195568" name="Changes" comment="map">
-      <change afterPath="$PROJECT_DIR$/recycleiT/static/puncteR.json" afterDir="false" />
+    <list default="true" id="16128c73-f0a6-4c42-a488-d65db1195568" name="Changes" comment="map cu pins">
+      <change afterPath="$PROJECT_DIR$/recycleiT/templates/guide.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycleiT/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycleiT/templates/leaderboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycleiT/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycleiT/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycleiT/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/recycleiT/templates/map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycleiT/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/recycleiT/static/map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/recycleiT/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/recycleiT/routes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +117,7 @@
       <workItem from="1700307415416" duration="1117000" />
       <workItem from="1700308541270" duration="1609000" />
       <workItem from="1700310157997" duration="776000" />
-      <workItem from="1700310944162" duration="8711000" />
+      <workItem from="1700310944162" duration="11139000" />
     </task>
     <task id="LOCAL-00001" summary="routes">
       <option name="closed" value="true" />
@@ -146,7 +151,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700317716166</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="map cu pins">
+      <option name="closed" value="true" />
+      <created>1700319685087</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1700319685087</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +173,7 @@
     <MESSAGE value="routes" />
     <MESSAGE value="models" />
     <MESSAGE value="map" />
-    <option name="LAST_COMMIT_MESSAGE" value="map" />
+    <MESSAGE value="map cu pins" />
+    <option name="LAST_COMMIT_MESSAGE" value="map cu pins" />
   </component>
 </project>

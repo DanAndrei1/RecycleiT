@@ -29,6 +29,3 @@ class RegisterForm(FlaskForm):
         user = get_user_by_email(email_to_check)
         if user:
             raise ValidationError("Email already exists")
-
-
-class
