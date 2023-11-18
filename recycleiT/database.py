@@ -1,17 +1,16 @@
-from __init__ import cursor, login_manager, connect
+from __init__ import cursor
 from models import User, Recycling
 
 
-@login_manager.user_loader
-def load_user(user_id):
-    cursor.execute('select * from public.users where id = %s', (user_id,))
-    row = cursor.fetchall()
-    try:
-        user = User(id=row[0][0], lastName=row[0][1], firstName=row[0][2], username=row[0][3], email=row[0][4],
-                    totalPoints=row[0][5], password=row[0][6])
-        return user
-    except Exception:
-        return None
+# @login_manager.user_loader
+#def load_user(user_id):
+#     cursor.execute('select * from public.users where id = %s', (user_id,))
+#     row = cursor.fetchall()
+#     try:
+#         user = User(id=row[0][0], username=row[0][1], email=row[0][2], password=row[0][3], budget=row[0][4])
+#         return user
+#     except Exception:
+#         return None
 
 
 def get_user_by_username(username):
@@ -48,11 +47,11 @@ def get_recycle_by_barcode(barcode):
 
 def insert_user(user):
     cursor.execute(
-        'insert into public.users values (%s, %s, %s, %s, %s, %s, %s)',
+        'insert into public.users values (%s, %s, %s, %s, %s %s)',
         (user.id, user.lastName, user.firstName, user.username,
-         user.email, user.totalPoints, user.password)
+         user.email, user.password)
     )
-    connect.commit()
+    cursor.commit()
 
 
 def get_leaderboard():

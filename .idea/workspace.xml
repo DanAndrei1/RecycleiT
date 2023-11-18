@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16128c73-f0a6-4c42-a488-d65db1195568" name="Changes" comment="routes">
-      <change afterPath="$PROJECT_DIR$/recycleiT/templates/register.html" afterDir="false" />
+    <list default="true" id="16128c73-f0a6-4c42-a488-d65db1195568" name="Changes" comment="ghid + altele">
+      <change afterPath="$PROJECT_DIR$/recycleiT/scancode.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycleiT/templates/scanner.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycleiT/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/recycleiT/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/recycleiT/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recycleiT/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/recycleiT/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycleiT/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/recycleiT/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/templates/guide.html" beforeDir="false" afterPath="$PROJECT_DIR$/recycleiT/templates/guide.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,36 +50,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/danandrei1/Desktop/RecycleiT",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "com.jetbrains.python.templateLanguages.PyTemplateLanguageModulesConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/danandrei1/Desktop/RecycleiT&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.templateLanguages.PyTemplateLanguageModulesConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
-      "PostgreSQL"
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
+      &quot;PostgreSQL&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/recycleiT" />
       <recent name="$PROJECT_DIR$/recycleiT/static" />
       <recent name="$PROJECT_DIR$/recycleiT/templates" />
-      <recent name="$PROJECT_DIR$/recycleiT" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -175,7 +176,23 @@
       <option name="project" value="LOCAL" />
       <updated>1700332634096</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="register">
+      <option name="closed" value="true" />
+      <created>1700334455769</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1700334455769</updated>
+    </task>
+    <task id="LOCAL-00009" summary="ghid + altele">
+      <option name="closed" value="true" />
+      <created>1700344946812</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1700344946812</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,9 +218,11 @@
     <MESSAGE value="map" />
     <MESSAGE value="map cu pins" />
     <MESSAGE value="routes" />
-    <option name="LAST_COMMIT_MESSAGE" value="routes" />
+    <MESSAGE value="register" />
+    <MESSAGE value="ghid + altele" />
+    <option name="LAST_COMMIT_MESSAGE" value="ghid + altele" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/RecycleiT$RecycleiT.coverage" NAME="RecycleiT Coverage Results" MODIFIED="1700329542883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/RecycleiT$RecycleiT.coverage" NAME="RecycleiT Coverage Results" MODIFIED="1700345867259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
