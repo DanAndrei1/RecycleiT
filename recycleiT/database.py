@@ -3,7 +3,7 @@ from models import User, Recycling
 
 
 # @login_manager.user_loader
-# def load_user(user_id):
+#def load_user(user_id):
 #     cursor.execute('select * from public.users where id = %s', (user_id,))
 #     row = cursor.fetchall()
 #     try:
@@ -47,9 +47,9 @@ def get_recycle_by_barcode(barcode):
 
 def insert_user(user):
     cursor.execute(
-        'insert into public.users values (%s, %s, %s, %s, %s)',
+        'insert into public.users values (%s, %s, %s, %s, %s %s)',
         (user.id, user.lastName, user.firstName, user.username,
-         user.email)
+         user.email, user.password)
     )
     cursor.commit()
 
