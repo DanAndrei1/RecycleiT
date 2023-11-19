@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Registration</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <title>Login</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+
             margin: 0;
             padding: 0;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: right;
             height: 100vh;
-        }
+            background-image: url('https://cdn.discordapp.com/attachments/1175447829884436612/1175650166951383112/Login.png?ex=656c008a&is=65598b8a&hm=a37a8fe57e0b49c7571f9fcaa16ee105120920c9c235b823f9dc9c3bb803d437&');
+            background-size: cover;
 
+        }
         .container {
-            background-color: #fff;
             padding: 20px;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 300px;
+            margin-right: 10vw;
+            background-color: transparent;
         }
 
         h1 {
@@ -38,6 +41,23 @@
             flex-direction: column;
         }
 
+        .form-control{
+            border-radius: 40px;
+            text-align: center;
+            background-color: white;
+        }
+
+        #login-form{
+            border-radius: 40px;
+        }
+
+        .form-control-login{
+
+            text-align: center;
+            width: 30%;
+            padding-left: 8vw;
+        }
+
         label {
             margin-bottom: 5px;
             color: #333;
@@ -52,7 +72,7 @@
 
         button {
             background-color: #4caf50;
-            color: #fff;
+            color: black;
             padding: 10px;
             border: none;
             border-radius: 3px;
@@ -65,22 +85,21 @@
     </style>
 </head>
 <body>
+    <img src="https://media.discordapp.net/attachments/1175658518272020641/1175658615848316999/logo.gif?width=705&height=292" style="padding-left: 9vw; height: 35vh" alt="">
     <div class="container">
-        <h2>User Login</h2>
+
         <form method="POST" class="form-register" style="color: white" action="">
         {{form.hidden_tag()}}
-        <h1 class="h3 mb-3 font-weight-normal">Intra in cont</h1>
+        <h1 class="h3 mb-3 font-weight-normal" style="text-align: center;color: white">Intra in cont</h1>
         <br>
         {{form.username(class="form-control", placeholder="Username")}}
         <br>
         {{form.password(class="form-control", placeholder="Password")}}
         <br>
-        {{form.submit(class="btn btn-lg btn-outline-primary")}}
+            <div class="form-control-login">{{form.submit(id = "login-form" ,class="btn btn-dark")}}</div>
         <br>
         <div class="checkbox mb-3">
-            <br>
-            <h6>Have an account</h6>
-            <a href="{{url_for('login')}}" class="btn btn-sm btn-secondary">Login</a>
+            <a href="{{url_for('register')}}" class="btn btn-sm btn-secondary"  >Register</a>
         </div>
     </form>
     </div>

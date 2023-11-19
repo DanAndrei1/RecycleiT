@@ -6,7 +6,7 @@ from database import get_user_by_username, get_user_by_email
 
 class LoginForm(FlaskForm):
     username = StringField(validators=[Length(min=4)])
-    password = StringField(validators=[Length(min=4)])
+    password = PasswordField(validators=[Length(min=4)])
     submit = SubmitField(label='Login')
 
     @staticmethod

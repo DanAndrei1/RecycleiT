@@ -1,38 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reciclare și Premii</title>
+    <title>Cum reciclez?</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style_guide.css">
+    <style>
+
+        #map{
+    height: 400px;
+    width: 100%;
+      background-color: grey;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #6ab855;
+  font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: whitesmoke;
+  border: 4px solid darkgreen;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+    </style>
 </head>
 <body>
 
-    <section>
-        <h1>De ce să reciclezi?</h1>
-        <p>Reciclarea este un gest simplu, dar cu impact uriaș asupra mediului înconjurător. Prin reciclarea deșeurilor, reducem poluarea, economisim resursele naturale și contribuim la crearea unui viitor mai durabil pentru generațiile viitoare.</p>
-    </section>
+{% include 'navbar.html' %}
 
-    <section>
-        <h2>Cum poți contribui?</h2>
-        <p>
+<div class="timeline">
+    <div class="container left">
+        <div class="content">
+          <h2>De ce să reciclezi?</h2>
+          <p>Reciclarea este un gest simplu, dar cu impact uriaș asupra mediului înconjurător. Prin reciclarea deșeurilor, reducem poluarea, economisim resursele naturale și contribuim la crearea unui viitor mai durabil pentru generațiile viitoare.</p>
+        </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+          <h2>Cum poți contribui?</h2>
+            <p>
             <strong>Separă deșeurile:</strong> Începe prin a separa deșeurile reciclabile de cele nereciclabile. Hârtia, cartonul, sticla și plasticul pot fi reciclate, în timp ce deșeurile periculoase trebuie eliminate corect.
             <br>
             <strong>Folosește punctele de reciclare:</strong> Pe harta noastră interactivă</a>, vei găsi puncte de reciclare marcate în zone strategice ale orașului.
             <br>
             <strong>Câștigă Life Points și premii:</strong> De fiecare dată când reciclezi, primești puncte în cadrul jocului nostru cu premii. Cu cât reciclezi mai mult, cu atât obții mai multe puncte, iar acestea vor fi contorizate într-un clasament al tuturor utilizatorilor, dar și într-un clasament cu tine și prietenii tăi.
-        </p>
-    </section>
-
-    <section>
-        <h2>Joc cu premii - Cum funcționează?</h2>
-        <p>
-            <strong>Înregistrează-te:</strong> Crează-ți un cont și începe-ți călătoria în lumea reciclării și a premiilor.
+            </p>
+        </div>
+    </div>
+    <div class="container left">
+        <div class="content">
+          <h2>Joc cu premii - Cum funcționează?</h2>
+            <p>
+            <strong>Separă deșeurile:</strong> Începe prin a separa deșeurile reciclabile de cele nereciclabile. Hârtia, cartonul, sticla și plasticul pot fi reciclate, în timp ce deșeurile periculoase trebuie eliminate corect.
             <br>
-            <strong>Reciclează și adună puncte:</strong> Folosește punctele de reciclare marcate pe hartă pentru a recicla și pentru a aduna puncte. Cu cât reciclezi mai mult, cu atât obții mai multe puncte.
+            <strong>Folosește punctele de reciclare:</strong> Pe harta noastră interactivă</a>, vei găsi puncte de reciclare marcate în zone strategice ale orașului.
             <br>
-            <strong>Câștigă premii:</strong> În fiecare săptămână, jucătorii cu cele mai multe puncte primesc premii.
-        </p>
-    </section>
+            <strong>Câștigă Life Points și premii:</strong> De fiecare dată când reciclezi, primești puncte în cadrul jocului nostru cu premii. Cu cât reciclezi mai mult, cu atât obții mai multe puncte, iar acestea vor fi contorizate într-un clasament al tuturor utilizatorilor, dar și într-un clasament cu tine și prietenii tăi.
+            </p>
+        </div>
+    </div>
+</div>
 
     <section>
         <p>
@@ -40,10 +190,87 @@
         </p>
     </section>
 
-    <section>
-        <p>
-            <a href="map.html">Pe harta noastra </a> cu puncte de reciclare te așteaptă. Începe-ți călătoria acum! - 
-        </p>
-    </section>
+    <h1>Harta puncte reciclare Cluj-Napoca</h1>
+
+    <div id="map"></div>
+
+    <script>
+        function initMap()
+      {
+        let options = {
+          zoom: 12,
+          center: { lat: 46.770000, lng:23.6100000 },
+        };
+        let map = new google.maps.Map(document.getElementById('map'), options);
+        let marker = new google.maps.Marker({
+          position: { lat: 46.7876976, lng: 23.6088566 },
+          map: map,
+        });
+        marker = new google.maps.Marker({
+          position: { lat: 46.7797073, lng: 23.6125376 },
+          map: map,
+        });
+        marker = new google.maps.Marker({
+          position: { lat: 46.7814706, lng: 23.6086752 },
+          map: map,
+        });
+        marker = new google.maps.Marker({
+          position: { lat: 46.7814706, lng: 23.6086752 },
+          map: map,
+        });
+        marker = new google.maps.Marker({
+          position: { lat: 46.7801974, lng: 23.5849758 },
+          map: map,
+        });
+        marker = new google.maps.Marker({
+          position: { lat: 46.7811788, lng: 23.5630857 },
+          map: map,
+        });
+        marker = new google.maps.Marker({
+          position: { lat: 46.7637783, lng: 23.5491811 },
+          map: map,
+        });
+        marker = new google.maps.Marker({
+          position: { lat: 46.7594299, lng: 23.5527277 },
+          map: map,
+        });
+        marker = new google.maps.Marker({
+          position: { lat: 46.7546131, lng: 23.5248809 },
+          map: map,
+        });
+        marker = new google.maps.Marker({
+          position: { lat: 46.7546131, lng: 23.5248809 },
+          map: map,
+        });
+        marker = new google.maps.Marker({
+          position: { lat: 46.7505898, lng: 23.5202258 },
+          map: map,
+        });
+        marker = new google.maps.Marker({
+          position: { lat: 46.7505898, lng: 23.5202258 },
+          map: map,
+        });
+        marker = new google.maps.Marker({
+          position: { lat: 46.7569199, lng: 23.5691419 },
+          map: map,
+        });
+        marker = new google.maps.Marker({
+          position: { lat: 46.7810940, lng: 23.6371243 },
+          map: map,
+        });
+        marker = new google.maps.Marker({
+          position: { lat: 46.7696143, lng: 23.6290692 },
+          map: map,
+        });
+        marker = new google.maps.Marker({
+          position: { lat: 46.7847929, lng: 23.6169816 },
+          map: map,
+        });
+
+      }
+    </script>
+     <script async defer
+             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4BQBDr9xZbeRi4pn6S9V9ga-twiuvMVo&callback=initMap">
+     </script>
 </body>
 </html>

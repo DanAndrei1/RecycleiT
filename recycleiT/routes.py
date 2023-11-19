@@ -37,11 +37,6 @@ def guide():
     return render_template('guide.html')
 
 
-@app.route('/map')
-def maps():
-    return render_template('map.html')
-
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
