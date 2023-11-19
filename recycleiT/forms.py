@@ -6,8 +6,16 @@ from database import get_user_by_username, get_user_by_email
 
 class LoginForm(FlaskForm):
     username = StringField(validators=[Length(min=4)])
-    email = StringField(validators=[Email(), DataRequired()])
+    password = StringField(validators=[Length(min=4)])
     submit = SubmitField(label='Login')
+
+    @staticmethod
+    def validate_username(username_to_check):
+        user = get_user_by_username(username=username_to_check)
+        if user:
+            return True
+        else:
+            raise ValidationError("Username does not exist")
 
 
 class RegisterForm(FlaskForm):
