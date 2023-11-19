@@ -2,17 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Code Scanner</title>
+    <title>Incarcare</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .center-content {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        #form {
+            margin-top: 20px;
+        }
+
+        #btn {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 
-<h1>File Upload</h1>
-    <form action="/upload" method="post" enctype="multipart/form-data">
-        <input type="file" name="file" accept="image/*">
-        <button type="submit">Upload</button>
-    </form>
-
-
+<div class="center-container">
+    <div class="center-content">
+        <div class="text-center">
+            <h1 class="mb-4">Incarcare cod de bare</h1>
+        </div>
+        <div>
+            <form id="form" action="/upload" method="post" enctype="multipart/form-data">
+                <input id="input" type="file" name="file" accept="image/*" style="padding-bottom: 15px">
+                <button id="btn" type="submit" class="btn btn-primary">Upload</button>
+            </form>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

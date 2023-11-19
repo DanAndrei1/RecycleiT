@@ -1,8 +1,8 @@
 import os
 import uuid
 
-from flask import render_template, request, jsonify, redirect, url_for, flash, Response
-from flask_login import login_user, logout_user, login_required, current_user
+from flask import render_template, request, redirect, url_for, flash
+from flask_login import login_user, logout_user, login_required
 
 from RecycleiT.recycleiT.scancode import get_text
 from database import *
