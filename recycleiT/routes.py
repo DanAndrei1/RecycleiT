@@ -82,6 +82,7 @@ def logout():
 
 
 @app.route('/scanner')
+@login_required
 def scan():
     return render_template('scanner.html')
 
