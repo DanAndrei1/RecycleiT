@@ -1,9 +1,10 @@
 import os
 import uuid
 
-from flask import render_template, request, jsonify, redirect, url_for, flash
+from flask import render_template, request, jsonify, redirect, url_for, flash, Response
 from flask_login import login_user, logout_user, login_required, current_user
 
+from RecycleiT.recycleiT.scancode import get_text
 from database import *
 from models import User
 from forms import RegisterForm, LoginForm
@@ -18,15 +19,16 @@ def index():
 
 
 @app.route("/leaderboard")
+@login_required
 def leaderboard():
     users = get_leaderboard()
     return render_template('leaderboard.html', users=users)
 
 
 @app.route('/<username>')
+@login_required
 def about(username):
     user = get_user_by_username(username)
-    print(user)
     return render_template('profile.html', user=user)
 
 
@@ -43,12 +45,12 @@ def maps():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
-    if form.validate_on_submit():
+    if form.is_submitted() and form.validate_username(form.username.data):
         attempted_user = get_user_by_username(form.username.data)
         if attempted_user is not None:
             login_user(attempted_user)
             flash(f'Succes! You are logged in as:{attempted_user.username}', category='success')
-            return redirect(url_for(about, username=attempted_user.username))
+            return redirect(url_for('about', username=attempted_user.username))
         else:
             flash(f'Username-ul si parola nu sunt corecte', category='danger')
     return render_template('login.html', form=form)
@@ -77,23 +79,34 @@ def register():
 
 
 @app.route('/logout')
+@login_required
 def logout():
     logout_user()
     flash("You have been logged out", category='info')
     return redirect(url_for('index'))
 
 
-def validate_barcode(id_cod):
-    pass
+@app.route('/scanner')
+def scan():
+    return render_template('scanner.html')
 
 
-# @app.route('/scanner')
-# def scan():
-#     id_cod = get_text_from_code()
-#     if (validate_barcode(id_cod)):
-#         return render_template('scanner.html')
-#     else:
-#         flash(f'Cod de bare invalid!')
+@app.route('/upload', methods=['GET', 'POST'])
+@login_required
+def upload():
+    if 'file' not in request.files:
+        return "No file part"
+
+    file = request.files['file']
+
+    if file.filename == '':
+        return "No selected file"
+
+    if file:
+        file.save(file.filename)
+        barcode = get_text(file.filename)
+        add_barcode(barcode)
+        return redirect('scanner')
 
 
 if __name__ == "__main__":

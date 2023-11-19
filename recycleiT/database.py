@@ -1,3 +1,7 @@
+from datetime import datetime
+
+from flask_login import current_user
+
 from __init__ import cursor, login_manager, connect
 from models import User, Recycling
 
@@ -74,3 +78,30 @@ def get_leaderboard():
             return users
     except Exception:
         return None
+
+
+def validate_barcode(id_barcode):
+    recycle = get_recycle_by_barcode(id_barcode)
+    if recycle is None:
+        return True
+    if recycle.id == id_barcode:
+        return False
+    return True
+
+
+def add_points(id, points):
+    cursor.execute('update users set total_points = total_points + %s where id = %s',
+                   (points, id))
+    connect.commit()
+
+
+def add_barcode(barcode):
+    data = barcode.split()
+    try:
+        nr = int(data[0])
+        points = nr * 5
+    except Exception:
+        return None
+    cursor.execute('insert into recycling values (%s, %s, %s, %s)',
+                   (barcode, current_user.id, str(datetime.now()), points))
+    add_points(current_user.id, points)
