@@ -57,7 +57,7 @@ def login():
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     form = RegisterForm()
-    if form.validate_username(form.username.data) and form.validate_email(form.email.data):
+    if form.is_submitted() and form.validate_username(form.username.data) and form.validate_email(form.email.data):
         user_to_create = User(id=str(uuid.uuid4()),
                               firstName=form.first_name.data,
                               lastName=form.last_name.data,
@@ -81,6 +81,19 @@ def logout():
     logout_user()
     flash("You have been logged out", category='info')
     return redirect(url_for('index'))
+
+
+def validate_barcode(id_cod):
+    pass
+
+
+# @app.route('/scanner')
+# def scan():
+#     id_cod = get_text_from_code()
+#     if (validate_barcode(id_cod)):
+#         return render_template('scanner.html')
+#     else:
+#         flash(f'Cod de bare invalid!')
 
 
 if __name__ == "__main__":
