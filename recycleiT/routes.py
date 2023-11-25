@@ -4,7 +4,7 @@ import uuid
 from flask import render_template, request, redirect, url_for, flash
 from flask_login import login_user, logout_user, login_required
 
-from RecycleiT.recycleiT.scancode import get_text
+from scancode import get_text
 from database import *
 from models import User
 from forms import RegisterForm, LoginForm

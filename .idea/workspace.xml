@@ -5,12 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16128c73-f0a6-4c42-a488-d65db1195568" name="Changes" comment="ghid + altele">
-      <change afterPath="$PROJECT_DIR$/recycleiT/scancode.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recycleiT/templates/scanner.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycleiT/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/recycleiT/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/recycleiT/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recycleiT/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/recycleiT/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycleiT/templates/guide.html" beforeDir="false" afterPath="$PROJECT_DIR$/recycleiT/templates/guide.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/static/Login.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/static/about.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/static/contact.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/static/home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/static/logo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/static/puncteR.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/static/ranking-star-solid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/static/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/static/style_guide.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/static/styles2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/templates/coolvetica rg it.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/templates/coolvetica rg.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/templates/guide.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/templates/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/templates/leaderboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/templates/navbar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/templates/profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/templates/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/templates/scanner.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/templates/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/templates/style_guide.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycleiT/templates/styles2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/text_ghid.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,9 +103,9 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/recycleiT" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/recycleiT/static" />
       <recent name="$PROJECT_DIR$/recycleiT/templates" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -119,6 +144,7 @@
       <workItem from="1700308541270" duration="1609000" />
       <workItem from="1700310157997" duration="776000" />
       <workItem from="1700310944162" duration="14518000" />
+      <workItem from="1700946777108" duration="756000" />
     </task>
     <task id="LOCAL-00001" summary="routes">
       <option name="closed" value="true" />
@@ -223,6 +249,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="ghid + altele" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/RecycleiT$RecycleiT.coverage" NAME="RecycleiT Coverage Results" MODIFIED="1700345867259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/RecycleiT$RecycleiT.coverage" NAME="RecycleiT Coverage Results" MODIFIED="1700936334890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
