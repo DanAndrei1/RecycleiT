@@ -1,26 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Cum reciclez?</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="static/style_guide.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-</head>
-<body>
-
-    <div class="spatiu">
-    </div>
-
-    <div class="container" id="map"></div>
-    <br><br><br>
-
-    <script>
-        src = '/static/map.js'
-    </script>
-    <script>
-            function initMap()
-      {
+    function initMap()
+    {
         let options = {
           zoom: 12,
           center: { lat: 46.770000, lng:23.6100000 },
@@ -90,11 +69,4 @@
           position: { lat: 46.7847929, lng: 23.6169816 },
           map: map,
         });
-
-      }
-    </script>
-     <script async defer
-             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4BQBDr9xZbeRi4pn6S9V9ga-twiuvMVo&callback=initMap">
-     </script>
-</body>
-</html>
+    }

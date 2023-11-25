@@ -1,33 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-    body {
-      top: 0;
-      width: 100%;
-      background-size: 100%;
-        height: 400vh;
-      background-image: url('https://cdn.discordapp.com/attachments/1175658518272020641/1175683071979294730/LANDPAGE.png?ex=656c1f2f&is=6559aa2f&hm=e4a038eb65310a0d8e6f35fe0255caeea27ca86b85993702c17ed6bfa12c618f&');
-      font-family: Font;
-    }
-</style>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/static/style.css">
-</head>
-
-
-<body>
-
-{% include 'navbar.html' %}
-
-<script>'/static/navbar.js'</script>
-
-<script>
-     window.onscroll = function() {scrollFunction()};
+ window.onscroll = function() {scrollFunction()};
     var a = 0
 
     function setMinHeight() {
-        var header = document.getElementById('header');
+        var header = document.getElementById('head');
         var backgroundImage = new Image();
         backgroundImage.src = getComputedStyle(header).backgroundImage.replace(/url\((['"])?(.*?)\1\)/gi, '$2').split(',')[0];
 
@@ -55,7 +30,3 @@
         navbar.style.padding = "0px";
       }
     }
-</script>
-
-</body>
-</html>

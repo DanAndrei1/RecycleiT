@@ -15,7 +15,7 @@
             align-items: center;
             justify-content: right;
             height: 100vh;
-            background-image: url('https://cdn.discordapp.com/attachments/1175447829884436612/1175650166951383112/Login.png?ex=656c008a&is=65598b8a&hm=a37a8fe57e0b49c7571f9fcaa16ee105120920c9c235b823f9dc9c3bb803d437&');
+            background-image: url('/static/Login.png');
             background-size: cover;
 
         }
@@ -25,6 +25,7 @@
             width: 300px;
             margin-right: 10vw;
             background-color: transparent;
+            height: 80%;
         }
 
         h1 {
@@ -34,6 +35,8 @@
         h2 {
             text-align: center;
             color: #333;
+            padding: 20px;
+            margin-top: 20px;
         }
 
         form {
@@ -85,11 +88,10 @@
     </style>
 </head>
 <body>
+ <img src="/static/logo.gif" style="padding-left: 9vw; height: 35vh" alt="">
     <div class="container">
-        <h2>User Registration</h2>
         <form method="POST" class="form-register" style="color: white" action="">
         {{form.hidden_tag()}}
-        <h1 class="h3 mb-3 font-weight-normal">Please Create your Account</h1>
         <br>
         {{form.username(class="form-control", placeholder="Username")}}
         <br>
@@ -103,11 +105,11 @@
         <br>
         {{form.password2(class="form-control", placeholder="Password Confirmation")}}
         <br>
-        {{form.submit(class="btn btn-lg btn-outline-primary")}}
+        {{form.submit(class="btn btn-lg btn-primary")}}
         <br>
         <div class="checkbox mb-3">
             <br>
-            <h6>Have an account</h6>
+            <h6>Ai deja un cont?</h6>
             <a href="{{url_for('login')}}" class="btn btn-sm btn-secondary">Login</a>
         </div>
     </form>

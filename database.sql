@@ -57,6 +57,7 @@ CREATE TABLE public.users (
     first_name character varying(50) NOT NULL,
     username character varying(30) NOT NULL,
     email character varying(50) NOT NULL,
+    password character varying(60) NOT NULL,
     total_points bigint DEFAULT 0
 );
 
@@ -138,4 +139,3 @@ ALTER TABLE ONLY public.recycling
 --
 -- PostgreSQL database dump complete
 --
-

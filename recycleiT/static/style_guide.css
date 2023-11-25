@@ -10,17 +10,19 @@
   box-sizing: border-box;
 }
 
-/* Set a background color */
 body {
+  top: 0;
+  width: 100%;
+  background-size: cover;
   background-image: url("https://cdn.discordapp.com/attachments/1160854828562513990/1175736676035862558/RoadMAP.png?ex=656c511b&is=6559dc1b&hm=e4f0a7935a6a0f35174066fbc2de93b2abb8b0758e292fd4a17de1621104a9f5&");
   font-family: Font;
 }
 @font-face {
   font-family: Font;
-  src: url("coolvetica rg.otf");
+  src: url("static/coolvetica rg.otf");
 }
 .spatiu{
-  height: 165vh;
+  height: 200vh;
 }
 h1{
   display: flex;

@@ -1,25 +1,25 @@
 <div id="navbar" class="shadow">
     <a href="{{url_for('index')}}" id="logo">
-        <img height="50px" ,src="https://media.discordapp.net/attachments/1175658518272020641/1175658615848316999/logo.gif?width=705&height=292" alt="Logo">
+        <img height="50px" src="/static/logo.gif" alt="Logo">
     </a>
     <div id="navbar-right">
         <a href="{{url_for('scan')}}" class="active">
-            <img height="50px" ,src="https://media.discordapp.net/attachments/1175658518272020641/1175658649348227122/home.png?ex=656c0870&is=65599370&hm=d688e914c3e85f801525b2df44072d4824ef740211237170c273dbf09dfe2bb4&=&width=510&height=671" alt="Home">
+            <img height="50px" src="/static/home.png" alt="Home">
         </a>
         <a href="{{url_for('guide')}}">
-            <img height="50px", src="https://media.discordapp.net/attachments/1175658518272020641/1175658637197332500/contact.png?ex=656c086d&is=6559936d&hm=8cfbcb123735f28e4d5ededd939444a804d5a4d398e2234f4767bda8ee380c15&=&width=432&height=671", alt="Contact">
+            <img height="50px" src="/static/contact.png" alt="Contact">
         </a>
         {% if current_user.is_authenticated %}
         <a href="{{url_for('about', username=current_user.username)}}">
-            <img height="50px", src="https://media.discordapp.net/attachments/1175658518272020641/1175658624002031647/about.png?ex=656c086a&is=6559936a&hm=5a5924130a900194cf40b0883f39855731ff99c775a3e9ce2d1c06b6ff005e7f&=&width=587&height=671", alt="About">
+            <img height="50px" src="/static/about.png" alt="About">
         </a>
         {%else%}
             <a href="{{url_for('login')}}">
-            <img height="50px", src=".https://media.discordapp.net/attachments/1175658518272020641/1175658624002031647/about.png?ex=656c086a&is=6559936a&hm=5a5924130a900194cf40b0883f39855731ff99c775a3e9ce2d1c06b6ff005e7f&=&width=587&height=671", alt="About">
+            <img height="50px" src="/static/about.png" alt="About">
         </a>
         {% endif %}
         <a href="{{url_for('leaderboard')}}">
-            <img height="50px" , src="https://media.discordapp.net/attachments/1160854828562513990/1175512043575574619/ranking-star-solid.png?ex=656b7fe7&is=65590ae7&hm=a5b2e9fb783a1c1f1b50da49475ab06d89b1e968e27eb1fd8dd6cd2147ae9d53&=&width=838&height=671" alt="">
+            <img height="50px" src="/static/ranking-star-solid.png" alt="">
         </a>
     </div>
 </div>
