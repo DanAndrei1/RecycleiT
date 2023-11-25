@@ -133,7 +133,29 @@
     </style>
 </head>
 <body>
-    {% include 'navbar.html' %}
+    <body>
+
+    <div id="navbar" class = "shadow">
+    <a href="{{url_for('index')}}" id="logo">
+        <img height="50px" src="/static/logo.gif">
+    </a>
+    <div id="navbar-right">
+        <a href="{{url_for('scan')}}" class="active">
+            <img height = "50px" src="/static/home.png" alt="Home">
+        </a>
+        <a href="{{url_for('guide')}}">
+            <img height= "50px" , src="/static/contact.png">
+        </a>
+        <a href="{{url_for('leaderboard')}}">
+            <img height="50px", src="/static/ranking-star-solid.png" alt="">
+        </a>
+        <a href="{{url_for('login')}}">
+            <img height="50px"  src="/static/about.png">
+        </a>
+
+    </div>
+    </div>
+
     <div class="leaderboard">
         <h2>Leaderboard</h2>
         <table>
